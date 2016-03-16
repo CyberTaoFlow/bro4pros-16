@@ -15,6 +15,8 @@ export
 	redef enum Notice::Type += {
                 LandMine,
         } ;
+
+	global active_subnets: set[subnet] &redef ; 
 } 
 
 
@@ -95,7 +97,7 @@ event connection_state_remove(c: connection)
 	
 	local iplist = "" ; 
 
-	if (Site::is_local_addr(dst) && dst !in LBNL::LBNL_Subnet_table)
+	if (Site::is_local_addr(dst) && dst !in active_subnets)
 	{
 		if ((is_failed_conn(c) || is_reverse_failed_conn(c) ) ) 
 		{ 
