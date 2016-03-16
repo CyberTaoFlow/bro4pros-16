@@ -1,0 +1,7 @@
+1) if you are using darknet-tcp: make sure you 
+	redef Darknet::active_subnets += { ## list of your active subnet allocations }; 
+
+if you a lot of subnets which keep getting allocated and unallocated ie you have a high flux subnet allocation, you can use input-framework and just maintain robotic controlled file. Contact me and I can send my code for that. 
+
+2) For knockknock.bro: you can add the exceptions host and services into knockknock.exceptions file. I generally put IP and services for stickly config machines in here such as printers or active dir servers which are behind firewall and laptops from home still think they can connect to these. 
+

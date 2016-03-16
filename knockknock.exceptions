@@ -1,0 +1,6 @@
+#fields exclude_ip      exclude_port    t       comment
+1.2.3.4	0       tcp     host1
+1.2.3.4	10       tcp     host1
+1.2.1.4	20       tcp     host2
+1.2.2.4	30       tcp     host3
+1.2.3.5	40       tcp     host4
